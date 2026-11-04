@@ -56,7 +56,7 @@ class TestDivide:
         assert divide(6, 3) == 2
 
     def test_divide_returns_float(self):
-        assert divide(5, 2)==2.5
+        assert divide(5, 2) == 2.5
 
     def test_divide_by_zero_raises_error(self):
         with pytest.raises(ValueError, match="Cannot divide by zero"):
