@@ -1,9 +1,5 @@
 """Simple calculator module for CI demonstration."""
 
-import os  # LINT ERROR: F401 - unused import
-import sys  # LINT ERROR: F401 - unused import
-from typing import List  # LINT ERROR: F401 - unused import
-
 
 def add(a: float, b: float) -> float:
     """Add two numbers."""
@@ -31,8 +27,9 @@ def divide(a: float, b: float) -> float:
     return a / b
 
 
-def power(base, exponent):  # LINT ERROR: Missing type annotations (MyPy)
+def power(
+    base: float, exponent: float
+) -> float:  # LINT ERROR: Missing type annotations (MyPy)
     """Raise base to the power of exponent."""
-    result = base ** exponent
-    unused_variable = 42  # LINT ERROR: F841 - local variable assigned but never used
+    result: float = base**exponent
     return result
