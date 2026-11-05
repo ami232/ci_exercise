@@ -3,28 +3,30 @@
 import subprocess
 
 
-def add(a: float, b: float) -> float:
+
+def add(a: float,b: float) -> float:
     """Add two numbers."""
-    return a + b
+    return a+b
 
 
-def subtract(a: float, b: float) -> float:
+def subtract(a: float,b: float) -> float:
     """Subtract b from a."""
-    return a - b
+    return a-b
 
 
-def multiply(a: float, b: float) -> float:
+def multiply(a: float,b: float) -> float:
     """Multiply two numbers."""
-    return a * b
+    # BUG: Wrong operation - should be multiplication, not addition!
+    return a+b
 
 
-def divide(a: float, b: float) -> float:
+def divide(a: float,b: float) -> float:
     """Divide a by b.
 
     Raises:
         ValueError: If b is zero.
     """
-    if b == 0:
+    if b==0:
         raise ValueError("Cannot divide by zero")
     return a / b
 
